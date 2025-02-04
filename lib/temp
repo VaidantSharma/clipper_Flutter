@@ -1,0 +1,78 @@
+import 'package:flutter/material.dart';
+import 'buttons/layoutButton.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: MyApp(),
+  ));
+}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.black,
+        body: Column( // Use Column for vertical layout
+          children: [
+            // Top Image Part
+            Container(
+              height: MediaQuery.of(context).size.height * 0.35, // Adjust height as needed
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assests/img.png'), // Replace with your image path
+                  fit: BoxFit.cover, // Or BoxFit.contain, etc.
+                ),
+              ),
+            ),
+
+            // Info Bar
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 15), // Adjust padding as needed
+              color: Colors.grey[300], // Background color for the bar
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  _buildInfoItem('Followers', '10K'), // Replace with your data
+                  _buildInfoItem('Following', '500'),
+                  _buildInfoItem('Tournaments Participated', '20'),
+                  _buildInfoItem('Tournaments Won', '5'),
+                ],
+              ),
+            ),
+
+
+            // Buttons and Red Line
+            Expanded(
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min, // Ensure it doesn't take infinite height
+                  children: [
+                    SizedBox(
+                      height: 500, // Set a fixed height for ButtonLayout
+                      child: ButtonLayout(),
+                    ),
+                    SizedBox(height: 1),
+                    Container(
+                      height: 2,
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      color: Colors.red,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildInfoItem(String label, String value) {
+    return Column(
+      children: [
+        Text(value, style: TextStyle(fontWeight: FontWeight.bold)),
+        Text(label),
+      ],
+    );
+  }
+}
