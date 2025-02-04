@@ -1,16 +1,8 @@
-# button_task
+# Clipper Flutter Button
 
-A new Flutter project.
+This Flutter project implements a custom-shaped button using the **Clipper** function, allowing you to create buttons with unique, personalized shapes. The button includes several interactive features like highlighting when selected and providing haptic feedback (vibration) on press.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Features
+- **Custom Shape**: Create buttons with various shapes by modifying the clipper function.
+- **Button Highlight**: The button visually highlights when selected or pressed, giving users a dynamic, responsive feel.
+- **Vibration Feedback**: Provides vibration feedback when the button is pressed for an enhanced user experience.
