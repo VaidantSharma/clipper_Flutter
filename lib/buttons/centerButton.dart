@@ -9,14 +9,13 @@ class TriangleClipper extends CustomClipper<Path> {
 
     // Bottom-left and bottom-right remain at the full width
     Path path = Path();
-    path.moveTo(size.width * 0.46, 5); // (46% 0)
-    path.lineTo(size.width * 0.558, 5); // (60% 0)
-    path.lineTo(size.width*0.94, size.height * 0.84); // (100% 84%)
-    path.lineTo(size.width * 0.89, size.height); // (89% 100%)
-    path.lineTo(size.width * 0.13, size.height); // (13% 100%)
-    path.lineTo(7, size.height * 0.85); // (0% 85%)
+    path.moveTo(size.width * 0.43, 0);
+    path.lineTo(size.width * 0.57, 0);
+    path.lineTo(size.width, size.height * 0.8);
+    path.lineTo(size.width * 0.84, size.height);
+    path.lineTo(size.width * 0.15, size.height);
+    path.lineTo(0, size.height * 0.8);
     path.close();
-
     return path;
   }
 
